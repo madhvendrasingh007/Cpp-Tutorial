@@ -1,0 +1,56 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+int main(){
+    //input and output of the string
+    string str3 = "Madhvendra";
+    
+    // user input
+    string str;
+    cout<<"enter a string: ";
+    cin>>str;
+    cout<<"User input: "<<str<<endl;
+    
+    // inbuilt input
+    string a="hi";
+    cout<<"System input: "<<a<<endl;
+
+    //word for n number of times
+    cout<<"String of n element is: ";
+    string str1(5,'h');
+    cout<<str1<<endl;
+
+    //multiple words using spaces
+    // int str2;
+    // cout<<"Enter a sentence with spaces: ";
+    // getline(cin,str2);
+    // cout<<str2<<endl;
+
+    //apending(combining) two string
+    cout<<"appended word is: ";
+    cout<<str+str1<<endl;
+
+    // accessing particular element
+    cout<<"Element a index(1) in user input is: ";
+    cout<<str[1]<<endl;
+
+    // finding an element
+    cout<<"Your letter is founded at: ";
+    cout<<str3.find("ven")<<endl;
+
+    // deleting an element
+    cout<<"Erased result is: ";
+    str3.erase(0,3);
+    cout<<str3<<endl;
+
+    // inserting a word
+    cout<<"After insertion: ";
+    str3.insert(0,"Mad");
+    cout<<str3<<endl;
+
+    // length of string
+    cout<<"Length of the string is: ";
+    cout<<str3.length()<<endl;
+return 0;
+}
