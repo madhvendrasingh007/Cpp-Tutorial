@@ -1,0 +1,75 @@
+Introduction to Linked List
+-> Linked List is a very commonly used linear data structure which consists of group of nodes in a sequence.
+-> Each node holds its own data and the address of the next node hence forming a chain like structure.
+                 ___________________         ___________________         ___________________
+        Head--->|  addr   | next(*) |------>|  addr   | next(*) |------>|  addr   | next(*) |------->NULL
+                |_________|_________|       |_________|_________|       |_________|_________|
+                |------ Node -------|       |------ Node -------|       |------ Node -------|
+
+-> Implementation of linked list
+    struct Node {
+        int data;
+        struct Node *next;
+    };
+
+
+Advantages of Linked Lists
+-> They are a dynamic in nature which allocates the memory when required.
+-> Insertion and deletion operations can be easily implemented.
+-> Stacks and queues can be easily executed.
+-> Linked List reduces the access time.
+
+
+Disadvantages of Linked Lists
+-> The memory is wasted as pointers require extra memory for storage.
+-> No element can be accessed randomly; it has to access each node sequentially.
+-> Reverse Traversing is difficult in linked list.
+
+
+Applications of Linked Lists
+-> Linked lists are used to implement stacks, queues, graphs, etc.
+-> Linked lists let you insert elements at the beginning and end of the list.
+-> In Linked Lists we don't need to know the size in advance.
+
+
+Uses of Linked List
+-> The list is not required to be contiguously present in the memory. The node can reside any where in the memory and linked together to make a list. This achieves optimized utilization of space.
+-> List size is limited to the memory size and doesn't need to be declared in advance.
+-> Empty node can not be present in the linked list.
+-> We can store values of primitive types or objects in the singly linked list.
+
+
+Types of Linked Lists
+-> There are 3 different implementations of Linked List available, they are:
+    -> Simple Linked List   − Item navigation is forward only.
+    -> Doubly Linked List   − Items can be navigated forward and backward.
+    -> Circular Linked List − Last item contains link of the first element as next and the first element has a link to the last element as previous.
+
+
+Basic Operations
+-> Following are the basic operations supported by a list.
+    -> Insertion − Adds an element at the beginning of the list.
+    -> Deletion  − Deletes an element at the beginning of the list.
+    -> Display   − Displays the complete list.
+    -> Search    − Searches an element using the given key.
+    -> Delete    − Deletes an element using the given key.
+
+
+Singly Linked List
+    -> Singly linked lists contain nodes which have a data part as well as an address part i.e. next, which points to the next node in the sequence of nodes.
+    ->The operations we can perform on singly linked lists are insertion, deletion and traversal.
+
+Doubly Linked List
+    -> In a doubly linked list, each node contains a data part and two addresses, one for the previous node and one for the next node.
+
+Circular Linked List
+    -> In circular linked list the last node of the list holds the address of the first node hence forming a circular chain.
+
+
+Time Complexity of linked list
+ 	                Worst case          	Average Case
+    Search	           O(n)	                     O(n)
+    Insert	           O(1)                	     O(1)
+    Deletion	       O(1)	                     O(1)
+
+Space Complexity: O(n)

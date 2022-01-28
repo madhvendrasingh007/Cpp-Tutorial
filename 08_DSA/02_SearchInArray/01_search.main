@@ -1,0 +1,45 @@
+To search an element in a given array, there are two popular algorithms available:
+
+    -> Linear Search
+    -> Binary Search
+
+
+1) Linear Search:
+-> This search method searches for an element by visiting all the elements sequentially until the element is found or the array finishes. It follows the array traversal method.
+
+-> Implementing Linear Search
+Following are the steps of implementation that we will be following:
+
+    1. Traverse the array using a for loop.
+    2. In every iteration, compare the target value with the current value of the array.
+        -> If the values match, return the current index of the array.
+        -> If the values do not match, move on to the next array element.
+    3. If no match is found, return -1.
+
+
+
+2) Binary Search:
+-> This search method searches for an element by breaking the search space into half each time it finds the wrong element. This method is limited to a sorted array. The search continues towards either side of the mid, based on whether the element to be searched is lesser or greater than the mid element of the current search space.
+
+-> Implementing Binary Search Algorithm
+Following are the steps of implementation that we will be following:
+
+    1. Start with the middle element:
+        -> If the target value is equal to the middle element of the array, then return the index of the middle element.
+        -> If not, then compare the middle element with the target value,
+            --> If the target value is greater than the number in the middle index, then pick the elements to the right of the middle index, and start with Step 1.
+            --> If the target value is less than the number in the middle index, then pick the elements to the left of the middle index, and start with Step 1.
+    2. When a match is found, return the index of the element matched.
+    3. If no match is found, then return -1
+
+
+
+
+Linear Search                       Binary Search
+---------------------------------------------------------------
+Works on both sorted and            Works only on sorted arrays
+unsorted arrays
+
+Equality operations                 Inequality operations
+
+O(n) WC Complexity                  O(log n) WC Complexity

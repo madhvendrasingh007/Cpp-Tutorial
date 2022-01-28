@@ -1,0 +1,25 @@
+Delete from a Linked List
+You can delete either from the beginning, end or from a particular position.
+
+1. Delete from beginning
+    -> Point head to the second node
+        head = head->next;
+
+2. Delete from end
+    -> Traverse to second last element
+    -> Change its next pointer to null
+        struct node* temp = head;
+        while(temp->next->next!=NULL){
+          temp = temp->next;
+        }
+        temp->next = NULL;
+
+3. Delete from middle
+    -> Traverse to element before the element to be deleted
+    -> Change next pointers to exclude the node from the chain
+        for(int i=2; i< position; i++) {
+          if(temp->next!=NULL) {
+            temp = temp->next;
+          }
+        }
+        temp->next = temp->next->next;

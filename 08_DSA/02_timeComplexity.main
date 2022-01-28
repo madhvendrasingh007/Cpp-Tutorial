@@ -1,0 +1,102 @@
+Time complexity of an algorithm signifies the total time required by the program to run till its completion.
+
+The efficiency of an algorithm depends on the amount of time, storage and other resources required to execute the algorithm. The efficiency is measured with the help of asymptotic notations.
+
+
+Asymptotic Notations
+        -> Asymptotic notations are the mathematical notations used to describe the running time of an algorithm when the input tends towards a particular value or a limiting value.
+
+        -> For example: In bubble sort, when the input array is already sorted, the time taken by the algorithm is linear i.e. the best case.
+
+        But, when the input array is in reverse condition, the algorithm takes the maximum time (quadratic) to sort the elements i.e. the worst case.
+
+        When the input array is neither sorted nor in reverse order, then it takes average time. These durations are denoted using asymptotic notations.
+
+        -> There are mainly three asymptotic notations:
+
+            -> Big-O notation
+            -> Omega notation
+            -> Theta notation
+
+-> Big-O Notation (O-notation) / order of
+    -> Big-O notation represents the upper bound of the running time of an algorithm. Thus, it gives the WORST-CASE complexity of an algorithm.
+    -> Mathematically, if f(n) describes the running time of an algorithm; f(n) is O(g(n)) if and only if there exist positive constants c and n° such that:
+        0 ≤ f(n) ≤ c g(n)        for all n ≥ n°.
+    -> Here, n is the input size, and g(n) is any complexity function, for, e.g. n, n2, etc. (It is used to give upper bound on a function)
+    -> If a function is O(n), it is automatically O(n2) as well! Because it satisfies the equation given above.
+
+-> Omega Notation (Ω-notation)
+    -> Omega notation represents the lower bound of the running time of an algorithm. Thus, it provides the BEST-CASE complexity of an algorithm.
+    -> Just like O notation provides an asymptotic upper bound, Ω notation provides an asymptotic lower bound. 
+    -> Let f(n) define the running time of an algorithm; f(n) is said to be Ω (g(n)) if and only if there exist positive constants  c and n° such that:
+            0 ≤ c g(n) ≤ f(n)        for all n ≥ n°.
+    -> If a function is Ω (n2) it is automatically Ω (n) as well since it satisfies the above equation.
+
+-> Theta Notation (Θ-notation)
+    -> Theta notation encloses the function from above and below. Since it represents the upper and the lower bound of the running time of an algorithm, it is used for analyzing the AVERAGE-CASE complexity of an algorithm.
+    -> Let f(n) define the running time of an algorithm.
+        F(n) is said to be θ (g(n)) if f(n) is O (g(n)) and f(x) is Ω (g(n)) both. 
+             0  ≤ c2 g(n)  ≤  f(n) ≤ c1 g(n)      ∀    n ≥ no.  
+        The equation simply means that there exist positive constants c1 and c2 such that f(n) is sandwiched between c2 g(n) and c1 g(n).
+
+
+COMMON RUNTIME FROM BETTER TO WORSE
+
+    (BETTER)   1 < logn < n < nlogn < n2 < n3 < 2^x < n^x   (WORSE) 
+
+
+Best Case, Worst Case and Average Case Analysis of an Algorithm
+
+    Life can sometimes be lucky for us:
+        -> Exams getting canceled when you are not prepared, a surprise test when you are prepared, etc.   → Best case
+
+    Occasionally, we may be unlucky:
+        -> Questions you never prepared being asked in exams, or heavy rain during your sports period, etc.  → Worst case
+
+    However, life remains balanced overall with a mixture of these lucky and unlucky times. → Expected case
+
+
+    Analysis of a search algorithm:
+        Consider an array that is sorted in increasing order.
+    
+                1  7  18  28  50  180
+
+        We have to search a given number in this array and report whether it’s present in the array or not. In this case, we have two algorithms, and we will be interested in analyzing their performance separately. 
+
+        Algorithm 1 – Start from the first element until an element greater than or equal to the number to be searched is found.
+        
+        Algorithm 2 – Check whether the first or the last element is equal to the number. If not, find the number between these two elements (center of the array); if the center element is greater than the number to be searched, repeat the process for the first half else, repeat for the second half until the number is found. And this way, keep dividing your search space, making it faster to search.
+
+        Analyzing Algorithm 1: (Linear Search)
+
+            We might get lucky enough to find our element to be the first element of the array. Therefore, we only made one comparison which is obviously constant for any size of the array.
+        
+            Best case complexity = O(1)
+            If we are not that fortunate, the element we are searching for might be the last one. Therefore, our program made ‘n’ comparisons.
+
+            Worst-case complexity = O(n)
+            For calculating the average case time, we sum the list of all the possible case’s runtime and divide it with the total number of cases. Here, we found it to be just O(n). (Sometimes, calculation of average-case time gets very complicated.)
+        
+        Analyzing Algorithm 2: (Binary Search)
+
+            If we get really lucky, the first element will be the only element that gets compared. Hence, a constant time.
+            
+            Best case complexity = O(1)
+            If we get unlucky, we will have to keep dividing the array into halves until we get a single element. (that is, the array gets finished)
+            Hence the time taken : n + n/2 +n/4 + . . . . . . . . . . + 1  = logn with base 2 
+            
+            Worst-case complexity = O(log n)
+
+        Space Complexity:
+            -> Time is not the only thing we worry about while analyzing algorithms. Space is equally important.
+            -> Creating an array of size n (size of the input) → O (n) Space
+            -> If a function calls itself recursively n times, its space complexity is O (n).
+
+        What is log(n)?
+            -> Logn refers to how many times I need to divide n units until they can no longer be divided (into halves).
+
+            -> log8 = 3  ⇒  8/2  + 4/2  + 2/2   →    Can’t break anymore.
+            -> log4 = 2  ⇒  4/2  + 2/2   →    Can’t break anymore.
+
+
+

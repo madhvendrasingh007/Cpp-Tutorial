@@ -1,0 +1,51 @@
+What is Algorithm?
+    -> An algorithm is a set of well-defined instructions to solve a particular problem. It takes a set of input and produces a desired output. For example,
+
+    -> An algorithm to add two numbers:
+        1.Take two number inputs
+        2.Add numbers using the + operator
+        3.Display the result
+
+    -> Algorithm 1: Add two numbers entered by the user
+        Step 1: Start
+        Step 2: Declare variables num1, num2 and sum. 
+        Step 3: Read values num1 and num2. 
+        Step 4: Add num1 and num2 and assign the result to sum.
+                    sum←num1+num2 
+        Step 5: Display sum 
+        Step 6: Stop
+
+-------------------------------*****************************-------------------------------
+
+What are Data Structures?
+    -> It is a way of storing/arranging data in main memory so that it can be accessed and updated efficiently.
+
+    -> Depending on your requirement and project, it is important to choose the right data structure for your project. For example, if you want to store data sequentially in the memory, then you can go for the Array data structure.
+
+    Types of Data Structure
+        -> Linear data structure
+            -> In linear data structures, the elements are arranged in sequence one after the other. Since elements are arranged in particular order, they are easy to implement.
+            eg: array, stack, queue, linked list,etc.
+
+        -> Non-linear data structure
+            -> Elements in non-linear data structures are not in any sequence. Instead they are arranged in a hierarchical manner where one element will be connected to one or more elements.
+            eg: graph, trees,etc.
+
+
+
+Linear Vs Non-linear Data Structures
+
+Linear Data Structures
+    -> The data items are arranged in sequential order, one after the other.
+    -> All the items are present on the single layer.
+    -> It can be traversed on a single run. That is, if we start from the first    element, we can traverse all the elements sequentially in a single pass.
+    -> The memory utilization is not efficient.
+    -> The time complexity increase with the data size.
+
+Non-linear Data Structures
+    -> The data items are arranged in non-sequential order (hierarchical manner).
+    -> The data items are present at different layers.
+    -> It requires multiple runs. That is, if we start from the first element it might not be possible to traverse all the elements in a single pass.
+    -> Different structures utilize memory in different efficient ways depending on the need.
+    -> Time complexity remains the same.
+    -> Example: Tree, Graph, Map

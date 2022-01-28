@@ -1,0 +1,77 @@
+Insert Elements to a Linked List
+
+You can add elements to either the beginning, middle or end of the linked list.
+
+1. Insert at the beginning
+-> Allocate memory for new node
+-> Store data
+-> Change next of new node to point to head
+-> Change head to point to recently created node
+        
+        struct node *newNode;
+        newNode = malloc(sizeof(struct node));
+        newNode->data = 4;
+        newNode->next = head;
+        head = newNode;
+
+
+2. Insert at the End
+-> Allocate memory for new node
+-> Store data
+-> Traverse to last node
+-> Change next of last node to recently created node
+        
+        struct node *newNode;
+        newNode = malloc(sizeof(struct node));
+        newNode->data = 4;
+        newNode->next = NULL;
+
+        struct node *temp = head;
+        while(temp->next != NULL){
+          temp = temp->next;
+        }
+
+        temp->next = newNode;
+        
+
+3. Insert at the Middle
+-> Allocate memory and store data for new node
+-> Traverse to node just before the required position of new node
+-> Change next pointers to include new node in between
+        
+        struct node *newNode;
+        newNode = malloc(sizeof(struct node));
+        newNode->data = 4;
+
+        struct node *temp = head;
+
+        for(int i=2; i < position; i++) {
+          if(temp->next != NULL) {
+            temp = temp->next;
+          }
+        }
+        newNode->next = temp->next;
+        temp->next = newNode;
+
+
+ALGORITHM
+
+    -> Step 1: IF PTR = NULL
+            Write OVERFLOW
+            Go to Step 7
+            [END OF IF]
+
+    -> Step 2: SET NEW_NODE = PTR
+    -> Step 3: SET PTR = PTR → NEXT
+    -> Step 4: SET NEW_NODE → DATA = VAL
+    -> Step 5: SET NEW_NODE → NEXT = HEAD
+    -> Step 6: SET HEAD = NEW_NODE
+    -> Step 7: EXIT
+
+
+Time Complexity
+                    Worst Case
+at beginning    -       O(1)
+in between      -       O(n)
+at end          -       O(n)
+after a node    -       O(1)
