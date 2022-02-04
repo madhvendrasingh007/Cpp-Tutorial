@@ -1,0 +1,20 @@
+STACK
+A stack is a linear data structure that follows the principle of Last In First Out (LIFO). This means the last element inserted inside the stack is removed first.
+
+|       |   |        |   |        |   |        |   |    3    |  |       |
+|       |   |   1    |   |        |   |   3    |   |         |  |       |
+|       |   |        |   |    2   |   |   2    |   |    2    |  |   2   |
+|       |   |        |   |    1   |   |   1    |   |    1    |  |   1   |
+|_______|   |________|   |________|   |________|   |_________|  |_______|
+  Empty        push         push         push          pop
+  stack         1            2            3             3
+
+
+Operation in Stack: 
+
+-> Push:    Add an element to the top of a stack
+-> Pop:     Remove an element from the top of a stack
+-> IsEmpty: Check if the stack is empty
+-> IsFull:  Check if the stack is full
+-> Peek:    Get the value of the top element without removing it
+-> top:     Return topmost value of the stack
