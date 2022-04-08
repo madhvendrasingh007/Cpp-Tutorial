@@ -2,7 +2,6 @@
 153 = 1 + 125 + 27 = 153
     cube(1) + cube(5) + cube(3)
 */
-
 #include <iostream>
 using namespace std;
 
