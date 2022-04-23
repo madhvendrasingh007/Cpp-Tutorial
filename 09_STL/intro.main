@@ -1,0 +1,19 @@
+STL - Standard Tmeplate Library 
+
+Parts of STL
+    -> Containers
+        - Sequence Container: array,vector,deque,list
+        - Container Adaptors: staxk,queue,priority queue 
+        - Associative Container: set map,multiset,multimap
+        - Unordered Associative: Unordered set, Unordered map,Unordered multimap, Unordered multiset
+    
+    -> Iterators
+        - point to memory address of Containers
+        - begin(),end()
+        - syntax: vector<int> :: iterator it;
+    
+    -> Algorithms: binary search, lower/upper bound, min/max, reverse/rotate, count, find, sort/swap etc
+
+    -> Functors
+        - classes which can act as functions
+
