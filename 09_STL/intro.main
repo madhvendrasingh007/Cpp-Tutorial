@@ -11,6 +11,8 @@ Parts of STL
         - point to memory address of Containers
         - begin(),end()
         - syntax: vector<int> :: iterator it;
+        - Iterators are pointer-like entities used to access the individual elements in a container.
+        - Iterators are moved sequentially from one element to another element. This process is known as iterating through a container.
     
     -> Algorithms: binary search, lower/upper bound, min/max, reverse/rotate, count, find, sort/swap etc
 
