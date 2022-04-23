@@ -17,5 +17,5 @@ Parts of STL
     -> Algorithms: binary search, lower/upper bound, min/max, reverse/rotate, count, find, sort/swap etc
 
     -> Functors
-        - classes which can act as functions
+        - classes which can act as functions 
 
