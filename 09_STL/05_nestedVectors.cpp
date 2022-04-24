@@ -40,7 +40,7 @@ int main(){
     int n1;
     cin>>n1;
     vector<int> vect3[n1];
-    for(int i=0; i<n1; ++i){
+    for(int i=0; i<n1; ++i){    //no. of rows are fixed but no. of column are not fixed i.e vector
         int siz;
         cin>>siz;
         for(int j=0;j<siz;++j){
@@ -52,6 +52,8 @@ int main(){
     for(int i=0; i<n1; ++i){
         printVec1(vect3[i]);
     }
+    cout<<"Particular element: ";
+    cout<<vect3[0][1];
     /*input
     3
     3
