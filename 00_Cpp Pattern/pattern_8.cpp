@@ -14,22 +14,22 @@ void print(int c){
         // space
         for (int j = 0; j < i; j++)
         {
-            /* code */
+            cout<<" ";
         }
         
         // star
-        for (int j = 0; j < ; j++)
+        for (int j = 0; j < 2*c - (2*i+1); j++)
         {
-            /* code */
+            cout<<"*";
         }
         
 
         // space
         for (int j = 0; j < i; j++)
         {
-            /* code */
+            cout<<" ";
         }
-        
+        cout<<endl;
         
     }
     
